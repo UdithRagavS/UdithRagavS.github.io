@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Udith Ragav Saravana Kumar - Cybersecurity Portfolio</title>
+  <meta content="Portfolio for Udith Ragav Saravana Kumar, a Cybersecurity professional." name="description">
+  <meta content="portfolio, resume, cybersecurity, threat detection, cloud security, vulnerability assessment"
+    name="keywords">
+
+  <!-- Favicons - Placeholder, replace with actual favicons if available -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Devicon Icon Font - Latest for official tech icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom CSS Fixes and Animations -->
+  <style>
+    /* About Section List Alignment */
+    .about .content ul li {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .about .content ul li i {
+      margin-right: 8px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* FIXED: Tech Stack Grid Layout - 2 rows of 5 items each */
+    .skillsGrid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 24px;
+      margin: 32px auto 0;
+      padding: 0 20px;
+      max-width: 800px;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .skill {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 120px;
+      padding: 24px 16px;
+      transition: all 0.3s ease;
+      cursor: default;
+      border: 1px solid #f0f0f0;
+    }
+
+    .skill:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      border-color: #e0e0e0;
+    }
+
+    .skill i {
+      font-size: 48px !important;
+      margin-bottom: 12px;
+      transition: all 0.3s ease;
+      filter: none !important;
+    }
+
+    /* Brand-specific colors for icons */
+    .skill i.devicon-splunk-plain {
+      color: #0076a8 !important;
+    }
+
+    .skill i.devicon-amazonwebservices-plain-wordmark {
+      color: #ff9900 !important;
+    }
+
+    .skill i.devicon-docker-plain {
+      color: #2496ed !important;
+    }
+
+    .skill i.devicon-jira-plain {
+      color: #0052cc !important;
+    }
+
+    .skill i.devicon-linux-plain {
+      color: #fcc624 !important;
+    }
+
+    .skill i.devicon-python-plain {
+      color: #3776ab !important;
+    }
+
+    .skill i.devicon-mysql-plain {
+      color: #4479a1 !important;
+    }
+
+    .skill i.devicon-git-plain {
+      color: #f05032 !important;
+    }
+
+    .skill i.devicon-bash-plain {
+      color: #4eaa25 !important;
+    }
+
+    .skill:hover i {
+      transform: scale(1.1);
+    }
+
+    .skill span {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      text-align: center;
+      margin-top: 8px;
+      line-height: 1.2;
+    }
+
+    /* Text-only skills (MITRE ATT&CK) */
+    .skill-text {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border: 2px solid #dee2e6;
+      font-weight: 700;
+      color: #495057;
+    }
+
+    .skill-text:hover {
+      background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+      color: #212529;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .skillsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 16px;
+        padding: 0 10px;
+      }
+
+      .skill {
+        min-height: 100px;
+        padding: 16px 12px;
+      }
+
+      .skill i {
+        font-size: 40px !important;
+      }
+
+      .skill span {
+        font-size: 13px;
+      }
+    }
+
+    /* Remove old unused styles */
+    .tech-stack-item,
+    .tech-stack-non-icon {
+      display: none;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('assets/img/hero_bg.jpg') center center/cover no-repeat;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 2;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(255,255,255,0.7); /* subtle white overlay for readability */
+      z-index: 3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #222;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #007bff;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      font-size: 1.5rem;
+    }
+
+    .social-links a {
+      color: #222;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover {
+      color: #007bff;
+    }
+
+    .btn-primary, .btn-secondary {
+      min-width: 150px;
+      font-size: 1rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 6px;
+    }
+
+    .btn-primary {
+      background: #007bff;
+      border: none;
+    }
+
+    .btn-secondary {
+      background: #6c757d;
+      border: none;
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .hero-title { font-size: 1.1rem; }
+      .hero-content { padding: 0 10px; }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="#projects"><i class="bi bi-images navicon"></i><span>Projects</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section d-flex flex-column justify-content-center align-items-center">
+      <div id="particles-js"></div>
+      <div class="hero-content text-center">
+        <h1>Udith Ragav Saravana Kumar</h1>
+        <h2 class="hero-title">Cybersecurity Professional</h2>
+        <p class="hero-subtitle"></p>
+        <div class="social-links my-3">
+          <!-- <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a> -->
+          <a href="https://github.com/UdithRagavS" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        </div>
+        <div class="mt-4">
+          <a href="https://drive.google.com/file/d/1iZBbK1zegM2tWb3uDM7DvQDLXzKm0g70/view?usp=sharing" class="btn btn-primary me-2">Download Resume</a>
+          <a href="https://github.com/UdithRagavS/" class="btn btn-secondary" target="_blank">Visit Github</a>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>Proactive • Analytical • Results-driven</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center align-items-center">
+          <div class="col-lg-4">
+            <img src="assets/img/b7058f24-d3a2-473a-b02e-78dcbf29da97.jpg" class="img-fluid rounded-circle shadow-lg border-4 border-gray-300" alt="Profile image of Udith Ragav Saravana Kumar">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>Cybersecurity Professional & Security Engineer</h2>
+            <p class="fst-italic py-3">
+              I am a cybersecurity professional with hands-on experience in threat detection, vulnerability assessment,
+              and cloud security. My expertise is continuously honed through practical engagement with Hack The Box labs
+              and incident response simulations, complemented by my CompTIA Security+ certification.
+            </p>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <div><strong>Practical Application:</strong> Successfully applied security controls in real-world
+                  projects, including malware detection, blockchain privacy, and secure cloud deployments.</div>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <div><strong>Risk Reduction:</strong> Skilled in reducing risk and enhancing system resilience through
+                  analytical, proactive defense strategies.</div>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <div><strong>Continuous Learning:</strong> Committed to active learning and staying current with
+                  industry best practices and emerging threats.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /About Section -->
+
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="skills section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Tech Stack & Expertise</h2>
+        <p>A selection of the primary tools, technologies, and methodologies I work with.</p>
+      </div>
+      <div class="container">
+        <div class="skillsGrid">
+          <!-- Row 1: 5 items -->
+          <!-- Splunk -->
+          <div class="skill" data-aos="fade-up" data-aos-delay="100">
+            <i class="devicon-splunk-plain"></i>
+            <span>Splunk</span>
+          </div>
+          <!-- AWS -->
+          <div class="skill" data-aos="fade-up" data-aos-delay="150">
+            <i class="devicon-amazonwebservices-plain-wordmark"></i>
+            <span>AWS</span>
+          </div>
+          <!-- Docker -->
+          <div class="skill" data-aos="fade-up" data-aos-delay="200">
+            <i class="devicon-docker-plain"></i>
+            <span>Docker</span>
+          </div>
+          <!-- Jira -->
+          <div class="skill" data-aos="fade-up" data-aos-delay="250">
+            <i class="devicon-jira-plain"></i>
+            <span>Jira</span>
+          </div>
+          <!-- Kali Linux -->
+          <div class="skill" data-aos="fade-up" data-aos-delay="300">
+            <i class="devicon-linux-plain"></i>
+            <span>Kali Linux</span>
+          </div>
+
+          <!-- Row 2: 5 items -->
+          <!-- Python -->
+          <div class="skill" data-aos="fade-up" data-aos-delay="350">
+            <i class="devicon-python-plain"></i>
+            <span>Python</span>
+          </div>
+          <!-- MySQL -->
+          <div class="skill" data-aos="fade-up" data-aos-delay="400">
+            <i class="devicon-mysql-plain"></i>
+            <span>MySQL</span>
+          </div>
+          <!-- Git -->
+          <div class="skill" data-aos="fade-up" data-aos-delay="450">
+            <i class="devicon-git-plain"></i>
+            <span>Git</span>
+          </div>
+          <!-- Bash -->
+          <div class="skill" data-aos="fade-up" data-aos-delay="500">
+            <i class="devicon-bash-plain"></i>
+            <span>Bash</span>
+          </div>
+          <!-- MITRE ATT&CK (text only) -->
+          <div class="skill skill-text" data-aos="fade-up" data-aos-delay="550">
+            <span>MITRE ATT&CK</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Key Competencies</h2>
+        <p>My core areas of expertise that drive robust security solutions.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row skills-content">
+          <div class="col-lg-6">
+            <div class="resume-item">
+              <h4>Threat Detection & Incident Response</h4>
+              <ul>
+                <li>Real-time SOC alert dashboard development</li>
+                <li>Automated log inspection and reporting</li>
+                <li>Packet capture and analysis (Wireshark)</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Vulnerability Management</h4>
+              <ul>
+                <li>Vulnerability scanning (Nessus, Burp Suite, Snyk, OWASP ZAP)</li>
+                <li>Static code review and CI pipeline integration (OWASP Top 10)</li>
+                <li>Prioritized remediation report generation</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="resume-item">
+              <h4>Cloud Security</h4>
+              <ul>
+                <li>Secure LAMP deployment on AWS EC2</li>
+                <li>Log visibility and monitoring (CloudWatch, Splunk)</li>
+                <li>IAM and access control</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Secure Development & Architecture</h4>
+              <ul>
+                <li>Role-Based Access Control (RBAC) implementation</li>
+                <li>Backend security (hashing, input validation, parameterized queries)</li>
+                <li>Threat modeling and security risk tracking</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>A detailed overview of my professional experience, education, and achievements.</p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>Udith Ragav Saravana Kumar</h4>
+              <p><em>Cybersecurity professional with hands-on experience in threat detection, vulnerability assessment,
+                  and cloud security. CompTIA Security+ certified and skilled in enhancing system resilience through
+                  proactive defense strategies.</em></p>
+              <ul>
+                <li>Dublin, Ireland</li>
+                <li>+353 892550666</li>
+                <li>udithragavsaravanakumar@gmail.com</li>
+              </ul>
+            </div>
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Science in Cyber Security</h4>
+              <h5>2024 – 2025</h5>
+              <p><em>National College of Ireland, Dublin</em></p>
+              <p><strong>Coursework:</strong> Network Security & Penetration Testing, Malware Analysis, Cloud Security,
+                Cryptography, Secure Web Development, Blockchain, AI/ML in Cybersecurity.</p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Engineering in Computer Science</h4>
+              <h5>2019 – 2023</h5>
+              <p><em>Sri Krishna College of Engineering and Technology, India</em></p>
+              <p><strong>Coursework:</strong> Operating Systems, Cloud Computing, Data Structures, Software Testing,
+                Python Programming, Ethical Hacking.</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Security Engineer</h4>
+              <h5>Oct 2022 - Mar 2023</h5>
+              <p><em>Aspire Systems, Chennai, India</em></p>
+              <ul>
+                <li>Increased incident triage speed by 40% during UAT cycles by building a real-time SOC alert dashboard
+                  using HTML and JavaScript.</li>
+                <li>Reduced manual log inspection time by 60% across 5+ sprints by automating QA log reporting with
+                  Python.</li>
+                <li>Strengthened secure development practices by cutting static code review violations by 25%, through
+                  OWASP Top 10-based CI pipeline integration.</li>
+                <li>Contributed to SCRUM meetings with input on threat modeling, regression validation, and
+                  security-focused risk tracking across cross-functional teams.</li>
+                <li>Documented test results, vulnerabilities, and risk assessments to streamline QA handovers and
+                  improve traceability across CI/CD stages.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Resume Section -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="services section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+        <p>Highlighted projects showcasing practical application of cybersecurity skills.</p>
+      </div>
+      <div class="container">
+        <div class="row gy-4 justify-content-center gx-5">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-cyan position-relative">
+              <div class="icon"><i class="bi bi-cloud-arrow-up"></i></div>
+              <a href="#" class="stretched-link">
+                <h3>Secure LAMP Deployment on Cloud</h3>
+              </a>
+              <p>Deployed LAMP stack on AWS EC2, integrating CloudWatch and Splunk for log visibility across 4 services;
+                monitored 50+ events over simulated attack sessions with Kali Linux. Conducted vulnerability scans using
+                Nessus, identifying 10+ high/medium CVEs; generated prioritized remediation reports. Captured and
+                analyzed 1,000+ packets using Wireshark during simulated intrusions to trace suspicious behavior.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange position-relative">
+              <div class="icon"><i class="bi bi-shield-lock"></i></div>
+              <a href="https://github.com/UdithRagavS/Secure-Role-Based-Access-Control-System" class="stretched-link"
+                target="_blank">
+                <h3>Secure Role-Based Access Control System</h3>
+              </a>
+              <p>Developed a secure web platform with RBAC enforcing 5 user roles, managing 100+ records; reduced query
+                latency by 35% through SQL optimization. Implemented backend security using salted hashing, input
+                validation, and parameterized queries to prevent injection and credential compromise. Conducted manual
+                code audits and simulated attacks to ensure 0 critical vulnerabilities, meeting internal security
+                compliance benchmarks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Projects Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Feel free to reach out. I'm open to discussing new opportunities in cybersecurity.</p>
+      </div>
+      <div class="container" data-aos="fade" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Location</h3>
+                <p>Dublin, Ireland</p>
+              </div>
+            </div>
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email</h3>
+                <p>udithragavsaravanakumar@gmail.com</p>
+              </div>
+            </div>
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-phone flex-shrink-0"></i>
+              <div>
+                <h3>Phone</h3>
+                <p>+353 892550666</p>
+              </div>
+            </div>
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-github flex-shrink-0"></i>
+              <div>
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/UdithRagavS/" target="_blank">github.com/UdithRagavS/</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-center justify-content-center">
+            <div data-aos="fade-up" data-aos-delay="200">
+              <a href="mailto:udithragavsaravanakumar@gmail.com?subject=Inquiry from your Portfolio"
+                class="btn btn-primary">Send me an Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Udith Ragav Saravana Kumar</h3>
+      <p>Passionate Cybersecurity Professional dedicated to building resilient systems.</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/UdithRagavS/" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript" src="particles.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
