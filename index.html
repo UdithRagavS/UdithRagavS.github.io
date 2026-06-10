@@ -50,12 +50,11 @@
     /* Tech Stack Grid Layout - 2 rows of 5 items each */
     .skillsGrid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 24px;
       margin: 32px auto 0;
       padding: 0 20px;
-      max-width: 800px;
+      max-width: 900px;
       justify-content: center;
       align-content: center;
     }
@@ -155,8 +154,6 @@
 
     @media (max-width: 768px) {
       .skillsGrid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
         gap: 16px;
         padding: 0 10px;
       }
@@ -229,10 +226,11 @@
     }
 
     .hero-subtitle {
-      font-size: 1.2rem;
-      color: #333;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #007bff;
       margin-bottom: 1.5rem;
-      min-height: 1.6rem;
+      min-height: 2rem;
     }
 
     .hero-subtitle .typed-cursor {
@@ -303,7 +301,6 @@
       <div id="particles-js"></div>
       <div class="hero-content text-center">
         <h1>Udith Ragav Saravana Kumar</h1>
-        <h2 class="hero-title">Full Stack &amp; Security Engineer</h2>
         <p class="hero-subtitle"><span id="typed-roles"></span></p>
         <div class="social-links my-3">
           <a href="https://github.com/UdithRagavS" aria-label="GitHub"><i class="bi bi-github"></i></a>
@@ -415,6 +412,14 @@
             <i class="devicon-apachekafka-original colored"></i>
             <span>Kafka</span>
           </div>
+          <div class="skill" data-aos="fade-up" data-aos-delay="600">
+            <i class="devicon-linux-plain colored"></i>
+            <span>Linux</span>
+          </div>
+          <div class="skill" data-aos="fade-up" data-aos-delay="650">
+            <i class="devicon-python-plain colored"></i>
+            <span>Python</span>
+          </div>
         </div>
       </div>
     </section>
@@ -444,6 +449,16 @@
                 <li>CI/CD pipelines (GitLab, GitHub Actions, Jenkins) – automated testing & releases</li>
                 <li>Dockerized environments for scalable delivery</li>
                 <li>Monitoring & logging: CloudWatch, Splunk</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>IT & Systems Fundamentals</h4>
+              <ul>
+                <li>OS administration across Linux and Windows (VMs, WSL, service configuration)</li>
+                <li>Networking fundamentals: TCP/IP, DNS, DHCP, firewall rules</li>
+                <li>Identity & access management (IAM) and Active Directory concepts</li>
+                <li>Endpoint telemetry & log analysis: Sysmon, Splunk, CloudWatch</li>
+                <li>Issue tracking & customer-facing support (Jira, shift-based service roles)</li>
               </ul>
             </div>
           </div>
@@ -519,7 +534,7 @@
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
               <h4>Junior QA Engineer (Security)</h4>
-              <h5>[Confirm dates]</h5>
+              <h5>May 2023 – December 2023</h5>
               <p><em>Riota Private Limited, Chennai, India</em></p>
               <ul>
                 <li>Executed functional and security-focused test cases across web application features, documenting defects and verifying fixes through to closure.</li>
@@ -530,7 +545,7 @@
             </div>
             <div class="resume-item">
               <h4>Team Member (Shift-Based)</h4>
-              <h5>[Confirm dates] – Present</h5>
+              <h5>March 2026 – Present</h5>
               <p><em>Compass Group, Dublin, Ireland</em></p>
               <ul>
                 <li>Deliver dependable service in a fast-paced, high-volume environment while balancing shift work alongside study and an active job search.</li>
@@ -538,8 +553,8 @@
               </ul>
             </div>
             <div class="resume-item">
-              <h4>Team Member</h4>
-              <h5>[Confirm dates]</h5>
+              <h4>Sandwich Artist</h4>
+              <h5>September 2024 – April 2025</h5>
               <p><em>Subway, Dublin, Ireland</em></p>
               <ul>
                 <li>Provided consistent customer service and handled day-to-day operations in a busy food retail setting.</li>
