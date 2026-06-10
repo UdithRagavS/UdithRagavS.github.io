@@ -9,7 +9,7 @@
   <meta content="portfolio, resume, cybersecurity, threat detection, cloud security, vulnerability assessment"
     name="keywords">
 
-  <!-- Favicons - Placeholder, replace with actual favicons if available -->
+  <!-- Favicons -->
   <link href="assets/img/U.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -27,7 +27,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Devicon Icon Font - Latest for official tech icons -->
+  <!-- Devicon Icon Font -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
   <!-- Main CSS File -->
@@ -47,7 +47,7 @@
       flex-shrink: 0;
     }
 
-    /* FIXED: Tech Stack Grid Layout - 2 rows of 5 items each */
+    /* Tech Stack Grid Layout - 2 rows of 5 items each */
     .skillsGrid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -88,7 +88,6 @@
       filter: none !important;
     }
 
-    /* Brand-specific colors for icons */
     .skill i.devicon-javascript-plain colored {
       color: #0076a8 !important;
     }
@@ -142,7 +141,6 @@
       line-height: 1.2;
     }
 
-    /* Text-only skills (MITRE ATT&CK) */
     .skill-text {
       background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       border: 2px solid #dee2e6;
@@ -155,7 +153,6 @@
       color: #212529;
     }
 
-    /* Responsive adjustments */
     @media (max-width: 768px) {
       .skillsGrid {
         grid-template-columns: repeat(2, 1fr);
@@ -178,7 +175,6 @@
       }
     }
 
-    /* Remove old unused styles */
     .tech-stack-item,
     .tech-stack-non-icon {
       display: none;
@@ -206,7 +202,7 @@
       content: "";
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(255,255,255,0.7); /* subtle white overlay for readability */
+      background: rgba(255,255,255,0.7);
       z-index: 3;
     }
 
@@ -236,6 +232,11 @@
       font-size: 1.2rem;
       color: #333;
       margin-bottom: 1.5rem;
+      min-height: 1.6rem;
+    }
+
+    .hero-subtitle .typed-cursor {
+      color: #007bff;
     }
 
     .social-links {
@@ -302,12 +303,9 @@
       <div id="particles-js"></div>
       <div class="hero-content text-center">
         <h1>Udith Ragav Saravana Kumar</h1>
-        <h2 class="hero-title">Full Stack & Security Engineer</h2>
-        <p class="hero-subtitle"></p>
+        <h2 class="hero-title">Full Stack &amp; Security Engineer</h2>
+        <p class="hero-subtitle"><span id="typed-roles"></span></p>
         <div class="social-links my-3">
-          <!-- <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a> -->
           <a href="https://github.com/UdithRagavS" aria-label="GitHub"><i class="bi bi-github"></i></a>
         </div>
         <div class="mt-4">
@@ -332,12 +330,14 @@
           <div class="col-lg-8 content">
             <h2>Full Stack Developer with a Cybersecurity Edge</h2>
             <p class="fst-italic py-3">
-              I'm a frontend-focused full stack developer with a strong foundation in cybersecurity — belnding clean UI
+              I'm a frontend-focused full stack developer with a strong foundation in cybersecurity — blending clean UI
               engineering with secure backend systems. With an MSc in Cybersecurity and CompTIA Security+ certification, I build
               web applications that are scalable, maintainable, and secure by design.
-              I've developed production-grade systems using JavaScript, React.js, Node.js, AWS, and PostgreSQL, integrating security
-              best practices like encryption, IAM, and secure CI/CD pipelines. My thesis explored privacy-preserving blockchain
-              apps using Ethereum and Hyperledger, showcasing my ability to combine innovation with secure architecture.
+              I've developed systems using JavaScript, React.js, Node.js, AWS, and PostgreSQL, applying security
+              best practices like input validation, IAM, and secure CI/CD pipelines. My MSc thesis compared Ethereum and
+              Hyperledger Fabric for preserving privacy in smart-home IoT data — combining AES-256 encryption and SHA-256
+              hashing, off-chain IPFS storage with on-chain references, and smart contracts — to evaluate the privacy,
+              performance, and cost trade-offs of each platform.
             </p>
             <ul>
               <li>
@@ -375,55 +375,42 @@
       </div>
       <div class="container">
         <div class="skillsGrid">
-          <!-- Row 1: 5 items -->
-          <!-- JavaScript -->
           <div class="skill" data-aos="fade-up" data-aos-delay="100">
             <i class="devicon-javascript-plain colored"></i>
             <span>JavaScript</span>
           </div>
-          <!-- React -->
           <div class="skill" data-aos="fade-up" data-aos-delay="150">
             <i class="devicon-react-original colored"></i>
             <span>React.js</span>
           </div>
-          <!-- Node -->
           <div class="skill" data-aos="fade-up" data-aos-delay="200">
             <i class="devicon-nodejs-plain-wordmark colored"></i>
             <span>Node.js</span>
           </div>
-          <!-- AWS -->
           <div class="skill" data-aos="fade-up" data-aos-delay="250">
             <i class="devicon-amazonwebservices-plain-wordmark"></i>
             <span>AWS</span>
           </div>
-          <!-- Docker -->
           <div class="skill" data-aos="fade-up" data-aos-delay="300">
             <i class="devicon-docker-plain"></i>
             <span>Docker</span>
           </div>
-
-          <!-- Row 2: 5 items -->
-          <!-- Git -->
           <div class="skill" data-aos="fade-up" data-aos-delay="350">
             <i class="devicon-git-plain"></i>
             <span>Git</span>
           </div>
-          <!-- Jira -->
           <div class="skill" data-aos="fade-up" data-aos-delay="400">
             <i class="devicon-jira-plain"></i>
             <span>Jira</span>
           </div>
-          <!-- TypeScript -->
           <div class="skill" data-aos="fade-up" data-aos-delay="450">
             <i class="devicon-typescript-plain colored"></i>
             <span>TypeScript</span>
           </div>
-          <!-- Postgre -->
           <div class="skill" data-aos="fade-up" data-aos-delay="500">
             <i class="devicon-postgresql-plain colored"></i>
             <span>PostgreSQL</span>
           </div>
-          <!-- Kafka -->
           <div class="skill skill-text" data-aos="fade-up" data-aos-delay="550">
             <i class="devicon-apachekafka-original colored"></i>
             <span>Kafka</span>
@@ -431,8 +418,6 @@
         </div>
       </div>
     </section>
-
-
 
     <!-- Skills Section -->
     <section id="skills" class="skills section">
@@ -467,7 +452,7 @@
               <h4>Security Engineering & Risk Management</h4>
               <ul>
                 <li>Secure SDLC & threat modeling</li>
-                <li>AES-256 encryption, HSM integration (academic exposure)</li>
+                <li>AES-256 encryption, SHA-256 hashing (thesis implementation)</li>
                 <li>Vulnerability scanning: Snyk, Nessus, Burp Suite</li>
                 <li>Simulated incident response (Hack The Box, MITRE ATT&CK)</li>
               </ul>
@@ -476,7 +461,7 @@
               <h4>Agile Collaboration & System Design</h4>
               <ul>
                 <li>Agile/Scrum workflows with Jira & Confluence</li>
-                <li>BCI-integrated testing & collaborative delivery with QA + DevSecOps</li>
+                <li>Collaborative QA and delivery with development and DevSecOps teams</li>
                 <li>Familiarity with hexagonal & microservices architecture</li>
                 <li>Emphasis on clean code, documentation & TDD practices</li>
               </ul>
@@ -499,12 +484,12 @@
             <h3 class="resume-title">Summary</h3>
             <div class="resume-item pb-0">
               <h4>Udith Ragav Saravana Kumar</h4>
-              <p><em>Full Stack Developer & Cybersecurity Professional with hands-on experience in secure system 
-              design, cloud deployments, and threat detection. CompTIA Security+ certified and MSc in Cybersecurity, with a 
-              focus on building resilient, scalable applications using JavaScript, Node.js, and AWS.</em></p>
+              <p><em>Cybersecurity and IT professional with hands-on experience in security-focused QA, secure system 
+              design, and cloud fundamentals. CompTIA Security+ and AWS Certified Cloud Practitioner, with an MSc in 
+              Cyber Security and full right to work in Ireland. Comfortable across security, IT support, and full stack 
+              development using JavaScript, Node.js, and AWS.</em></p>
               <ul>
                 <li>Dublin, Ireland</li>
-                <li>+353 892550666</li>
                 <li>udithragavsaravanakumar@gmail.com</li>
               </ul>
             </div>
@@ -522,20 +507,42 @@
               <p><em>Sri Krishna College of Engineering and Technology, India</em></p>
               <p><strong>Coursework:</strong> Python Programming, Data Structures, Cloud Computing, Software Testing, Database Management.</p>
             </div>
+            <h3 class="resume-title">Certifications</h3>
+            <div class="resume-item">
+              <ul>
+                <li>CompTIA Security+ (SY0-701) — valid through 2028</li>
+                <li>AWS Certified Cloud Practitioner — valid through 2028</li>
+              </ul>
+            </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
-              <h4>Software Engineer</h4>
-              <h5>Oct 2022 - Mar 2023</h5>
-              <p><em>Aspire Systems, Chennai, India</em></p>
+              <h4>Junior QA Engineer (Security)</h4>
+              <h5>[Confirm dates]</h5>
+              <p><em>Riota Private Limited, Chennai, India</em></p>
               <ul>
-                <li>Built a React and TypeScript dashboard with Node.js microservices, reducing UAT issue triage by 40%.</li>
-                <li>Automated QA log analysis using Python and Bash in Splunk, cutting inspection time by 60%.</li>
-                <li>Strengthened CI/CD pipelines using Jenkins, GitLab, and Docker — reducing deployment errors by 25%</li>
-                <li>Configured AWS EC2 auto-scaling and CloudWatch alarms to maintain uptime for 1000+ users.</li>
-                <li>Partnered with cross-functional teams using Agile/SCRUM, Jira, and Confluence to deliver stable production releases.</li>
-                <li>Designed scalable backend components with Spring Boot and clean architecture principles.</li>
+                <li>Executed functional and security-focused test cases across web application features, documenting defects and verifying fixes through to closure.</li>
+                <li>Performed manual security testing aligned to OWASP guidance — input validation, authentication, and access-control checks — and logged findings for remediation.</li>
+                <li>Worked with developers in an Agile workflow to reproduce issues, validate patches, and maintain regression coverage.</li>
+                <li>Maintained clear test documentation and reports to support release readiness.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Team Member (Shift-Based)</h4>
+              <h5>[Confirm dates] – Present</h5>
+              <p><em>Compass Group, Dublin, Ireland</em></p>
+              <ul>
+                <li>Deliver dependable service in a fast-paced, high-volume environment while balancing shift work alongside study and an active job search.</li>
+                <li>Coordinate with team members to meet service standards under time pressure.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Team Member</h4>
+              <h5>[Confirm dates]</h5>
+              <p><em>Subway, Dublin, Ireland</em></p>
+              <ul>
+                <li>Provided consistent customer service and handled day-to-day operations in a busy food retail setting.</li>
               </ul>
             </div>
           </div>
@@ -548,48 +555,78 @@
 <section id="projects" class="services section">
   <div class="container section-title" data-aos="fade-up">
     <h2>Projects</h2>
-    <p>Highlighted projects showcasing practical application of my software development and cybersecurity skills.</p>
+    <p>Highlighted projects showcasing practical application of my security and software development skills.</p>
   </div>
 
   <div class="container">
     <div class="row gy-4 justify-content-center gx-5">
-      
-      <!-- Project 1 -->
+
+      <!-- Project: Sysmon + Splunk Detection Lab -->
       <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
         <div class="service-item item-cyan position-relative">
-          <div class="icon"><i class="bi bi-cloud-arrow-up"></i></div>
-          <a href="#" class="stretched-link">
-            <h3>Cloud-Based LAMP Stack Deployment</h3>
+          <div class="icon"><i class="bi bi-search"></i></div>
+          <a href="https://medium.com/@s.udithragav/how-i-set-up-sysmon-and-splunk-without-losing-my-sanity-f151357bcfbf" class="stretched-link" target="_blank">
+            <h3>Sysmon + Splunk Detection Lab</h3>
           </a>
-          <p>Deployed a secure LAMP stack on AWS EC2 with real-time log monitoring using Splunk and CloudWatch across four services. 
-            Integrated Kafka to stream logs efficiently, boosting monitoring capability by 25%. Analyzed 1,000+ events using Wireshark and Nmap, 
-            reducing incident resolution time by 40% and enhancing system observability under stress.</p>
+          <p>Built a home blue-team lab streaming Windows endpoint telemetry into Splunk. Configured Sysmon
+            (SwiftOnSecurity config) on a Windows VM, forwarded events with the Splunk Universal Forwarder, and used
+            the Splunk Add-on for Microsoft Sysmon to parse logs into a dedicated index. Validated the pipeline with
+            SPL over process-creation, network, and file events — surfacing command lines and parent-child process
+            activity for threat hunting. Documented the full build in a write-up.</p>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+      <!-- Project: MSc Thesis - Blockchain for Smart Home Data Privacy -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
         <div class="service-item item-orange position-relative">
+          <div class="icon"><i class="bi bi-hdd-network"></i></div>
+          <a href="#" class="stretched-link">
+            <h3>Blockchain for Smart Home Data Privacy (MSc Thesis)</h3>
+          </a>
+          <p>Compared Ethereum (public) and Hyperledger Fabric (permissioned) for storing smart-home IoT data,
+            evaluating privacy, performance, and cost. Encrypted a simulated dataset with AES-256-CBC and hashed
+            activity data with SHA-256, stored encrypted payloads on IPFS with the CID referenced on-chain. Built a
+            Solidity contract deployed to Sepolia via Hardhat, Alchemy, and MetaMask, plus a Node.js Fabric chaincode
+            across a two-org network, with scripted checks for encryption, access control, and data exposure.</p>
+        </div>
+      </div>
+
+      <!-- Project: CTU-13 ML Botnet Detection -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item item-dark position-relative">
+          <div class="icon"><i class="bi bi-cpu"></i></div>
+          <a href="#" class="stretched-link">
+            <h3>ML-Based Botnet Detection (CTU-13)</h3>
+          </a>
+          <p>Coursework project applying machine learning to botnet detection on the CTU-13 dataset. Processed and
+            labelled network-flow traffic, engineered features, and trained classification models to separate botnet
+            activity from normal traffic, evaluating the results with standard detection metrics.</p>
+        </div>
+      </div>
+
+      <!-- Project: RBAC Web Platform -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+        <div class="service-item item-cyan position-relative">
           <div class="icon"><i class="bi bi-shield-lock"></i></div>
           <a href="https://github.com/UdithRagavS/x23140348_SecureWebDevelopment" class="stretched-link" target="_blank">
             <h3>Role-Based Access Control (RBAC) Web Platform</h3>
           </a>
-          <p>Built a scalable RBAC platform using JavaScript, Node.js, and Postgres in a microservices architecture. 
-            Optimized database schema and indexing to cut latency by 35% and improve query performance by 40%. 
-            Ensured system reliability with JUnit, Jest, and Cypress testing, achieving 99.9% uptime under load.</p>
+          <p>Built an RBAC web platform using JavaScript, Node.js, and PostgreSQL in a microservices structure.
+            Implemented role-based permissions, input validation, and automated tests (Jest, Cypress) to validate
+            access-control behaviour and core flows.</p>
         </div>
       </div>
 
-      <!-- Project 3 -->
+      <!-- Project: Crypto Dashboard -->
       <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-item item-dark position-relative">
+        <div class="service-item item-orange position-relative">
           <div class="icon"><i class="bi bi-bar-chart-line"></i></div>
           <a href="#" class="stretched-link">
             <h3>Crypto Dashboard</h3>
           </a>
-          <p>Built an interactive crypto dashboard using JavaScript, React, and TypeScript, integrating CoinGecko API.
-            Delivered dynamic Chart.js visualizations and advanced filtering to track real-time prices. 
-            Boosted user engagement by 50% through responsive design, caching, and optimized API calls.</p>
+          <p>Built an interactive crypto dashboard using JavaScript, React, and TypeScript, integrating the CoinGecko API.
+            Delivered dynamic Chart.js visualizations and filtering to track real-time prices, with caching and
+            responsive design for a smooth user experience.</p>
         </div>
       </div>
 
@@ -621,13 +658,6 @@
                 <p>udithragavsaravanakumar@gmail.com</p>
               </div>
             </div>
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-phone flex-shrink-0"></i>
-              <div>
-                <h3>Phone</h3>
-                <p>+353 892550666</p>
-              </div>
-            </div>
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
               <i class="bi bi-github flex-shrink-0"></i>
               <div>
@@ -654,7 +684,6 @@
       <h3 class="sitename">Udith Ragav Saravana Kumar</h3>
       <p>Engineer at heart, defender by mindset.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
         <a href="https://github.com/UdithRagavS/" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
       </div>
     </div>
@@ -682,6 +711,23 @@
   <script src="assets/js/main.js"></script>
   <script type="text/javascript" src="particles.js"></script>
   <script type="text/javascript" src="app.js"></script>
+
+  <!-- Hero rotating roles (typed.js) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var el = document.querySelector('#typed-roles');
+      if (el && typeof Typed !== 'undefined') {
+        new Typed('#typed-roles', {
+          strings: ['Security Analyst', 'IT Support Specialist', 'Full Stack Developer', 'Cloud & DevOps'],
+          typeSpeed: 60,
+          backSpeed: 30,
+          backDelay: 1800,
+          startDelay: 500,
+          loop: true
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
