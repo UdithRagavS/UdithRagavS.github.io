@@ -141,15 +141,18 @@
     }
 
     .skill-text {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      border: 2px solid #dee2e6;
+      background: #fff;
+      border: 1px solid #f0f0f0;
       font-weight: 700;
-      color: #495057;
+    }
+
+    .skill-text span {
+      font-size: 20px;
+      color: #333;
     }
 
     .skill-text:hover {
-      background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
-      color: #212529;
+      border-color: #e0e0e0;
     }
 
     @media (max-width: 768px) {
@@ -408,17 +411,23 @@
             <i class="devicon-postgresql-plain colored"></i>
             <span>PostgreSQL</span>
           </div>
-          <div class="skill skill-text" data-aos="fade-up" data-aos-delay="550">
-            <i class="devicon-apachekafka-original colored"></i>
-            <span>Kafka</span>
-          </div>
-          <div class="skill" data-aos="fade-up" data-aos-delay="600">
+          <div class="skill" data-aos="fade-up" data-aos-delay="550">
             <i class="devicon-linux-plain colored"></i>
             <span>Linux</span>
           </div>
-          <div class="skill" data-aos="fade-up" data-aos-delay="650">
+          <div class="skill" data-aos="fade-up" data-aos-delay="600">
             <i class="devicon-python-plain colored"></i>
             <span>Python</span>
+          </div>
+          <div class="skill" data-aos="fade-up" data-aos-delay="650">
+            <i class="devicon-solidity-plain"></i>
+            <span>Solidity</span>
+          </div>
+          <div class="skill skill-text" data-aos="fade-up" data-aos-delay="700">
+            <span>Splunk</span>
+          </div>
+          <div class="skill skill-text" data-aos="fade-up" data-aos-delay="750">
+            <span>Wireshark</span>
           </div>
         </div>
       </div>
@@ -733,7 +742,7 @@
       var el = document.querySelector('#typed-roles');
       if (el && typeof Typed !== 'undefined') {
         new Typed('#typed-roles', {
-          strings: ['Security Analyst', 'IT Support Specialist', 'Full Stack Developer', 'Cloud & DevOps'],
+          strings: ['Security Analyst', 'IT Support Specialist', 'Full Stack Developer'],
           typeSpeed: 60,
           backSpeed: 30,
           backDelay: 1800,
